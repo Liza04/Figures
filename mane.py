@@ -6,13 +6,14 @@ def square(x,y,size,colour,angle):
  #TODO:(Anya) 
   pass
 def trangle(x,y,size,colour,angle):
- #TODO:(Sasha) 
+ #TODO:(Sasha)
   pass
 def rhombus(x,y,size,degrees,angle,color):
  #TODO:(Liza)
  turtle.penup()
  turtle.goto(x, y)
  turtle.pendown()
+ turtle.begin_fill()
  turtle.color(color) #Цвет
  turtle.right(angle)  # повернуть курсор
  turtle.forward(size)  # задать размер стороны
@@ -22,6 +23,7 @@ def rhombus(x,y,size,degrees,angle,color):
  turtle.forward(size)  # сторона
  turtle.right(180 - degrees-angle)  # четвертый угол
  turtle.forward(size)  # последняя сторона
+ turtle.end_fill()
 #(Anya) rabbit
 
 #(Sasha) fish
