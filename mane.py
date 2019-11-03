@@ -55,13 +55,25 @@ def rhombus(x,y,size,degrees,angle,color):
 #(Anya) rabbit
 
 #(Sasha) fish
-trangle(20,60,'red',40,70,90,40)
+#trangle(20,60,'red',40,70,90,40)
 
 #(Liza) squirrel
-rhombus(100,100,300,80,30,'green')
+#rhombus(100,100,300,80,30,'green')
 
 #(Anya) human
-square(0, 150, 150, 'blue', 30)
+# square(0, 150, 150, 'blue', 30)
+def human(x, y):
+    head = 42
+    square(x + 50, y, 30, 'orange', 45)
+    trangle(x, y - head, 'green', 50, 45, 90, 50)
+    trangle(x + 100, y - head, 'yellow', 50, -45, -90, 50)
+    trangle(x + 50, y - 50 - head, 'blue', 35, 135, -90, 35)
+    trangle(x + 85, y - 85 - head, 'black', 20, -45, 120, 20)
+    rhombus(x + 50, y - 50 - head, 30, 160, -35, 'red')
+    trangle(x + 18, y - 93 - head, 'black', 20, 90, 120, 20)
+
+human(-400, 400)
+square(0, 0, 2, 'blue', 30)
 
 #(Sasha) human2
 
