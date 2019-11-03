@@ -2,10 +2,26 @@
 
 
 import turtle
-def square(x,y,size,colour,angle):
- #TODO:(Anya) 
-  pass
- def trangle(x, y, colour, size, angle, degrees, size2):
+
+
+def square(x, y, size, color, angle):
+  # TODO:(Anya)
+  turtle.penup()
+  turtle.goto(x, y)
+  turtle.pendown()
+  turtle.begin_fill()
+  turtle.color(color)
+  turtle.right(angle)
+  turtle.forward(size)
+  turtle.right(90)
+  turtle.forward(size)
+  turtle.right(90)
+  turtle.forward(size)
+  turtle.right(90)
+  turtle.forward(size)
+  turtle.end_fill()
+
+def trangle(x, y, colour, size, angle, degrees, size2):
   # TODO:(Sasha)
   turtle.penup()
   turtle.goto(x, y)
@@ -18,7 +34,7 @@ def square(x,y,size,colour,angle):
   turtle.forward(size2)
   turtle.right(180 - degrees + angle)
   turtle.goto(x, y)
-  turtle.end_fil
+  turtle.end_fill()
 
 def rhombus(x,y,size,degrees,angle,color):
  #TODO:(Liza)
@@ -45,8 +61,10 @@ trangle(20,60,'red',40,70,90,40)
 rhombus(100,100,300,80,30,'green')
 
 #(Anya) human
+square(0, 150, 150, 'blue', 30)
 
 #(Sasha) human2
 
 #(Liza) rocket
 
+turtle.exitonclick()
