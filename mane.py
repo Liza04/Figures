@@ -62,17 +62,17 @@ def rhombus(x,y,size,degrees,angle,color):
 
 #(Anya) human
 # square(0, 150, 150, 'blue', 30)
-def human(x, y):
-    head = 42
-    square(x + 50, y, 30, 'orange', 45)
-    trangle(x, y - head, 'green', 50, 45, 90, 50)
-    trangle(x + 100, y - head, 'yellow', 50, -45, -90, 50)
-    trangle(x + 50, y - 50 - head, 'blue', 35, 135, -90, 35)
-    trangle(x + 85, y - 85 - head, 'black', 20, -45, 120, 20)
-    rhombus(x + 50, y - 50 - head, 30, 160, -35, 'red')
-    trangle(x + 18, y - 93 - head, 'black', 20, 90, 120, 20)
+def human(x, y, scale):
+    head = 42 * scale
+    square(x + 50 * scale, y, 30 * scale, 'orange', 45)
+    trangle(x, y - head, 'green', 50 * scale, 45, 90, 50 * scale)
+    trangle(x + 100 * scale, y - head, 'yellow', 50 * scale, -45, -90, 50 * scale)
+    trangle(x + 50 * scale, y - 50 * scale - head, 'blue', 35 * scale, 135, -90, 35 * scale)
+    trangle(x + 85 * scale, y - 85 * scale - head, 'black', 20 * scale, -45, 120, 20 * scale)
+    rhombus(x + 50 * scale, y - 50 * scale - head, 30 * scale, 160, -35, 'red')
+    trangle(x + 18 * scale, y - 92 * scale - head, 'black', 20 * scale, 90, 120, 20 * scale)
 
-human(-400, 400)
+human(-400, 400, 4)
 square(0, 0, 2, 'blue', 30)
 
 #(Sasha) human2
