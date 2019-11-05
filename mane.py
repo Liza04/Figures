@@ -36,29 +36,45 @@ def trangle(x, y, colour, size, angle, degrees, size2):
   turtle.goto(x, y)
   turtle.end_fill()
 
-def rhombus(x,y,size,degrees,angle,color):
- #TODO:(Liza)
- turtle.penup()
- turtle.goto(x, y)
- turtle.pendown()
- turtle.begin_fill()
- turtle.color(color) #Цвет
- turtle.right(angle)  # повернуть курсор
- turtle.forward(size)  # задать размер стороны
- turtle.right(180 - degrees-angle)  # второй угол
- turtle.forward(size)  # сторона
- turtle.right(degrees+angle)  # третий угол
- turtle.forward(size)  # сторона
- turtle.right(180 - degrees-angle)  # четвертый угол
- turtle.forward(size)  # последняя сторона
- turtle.end_fill()
+
+ def rhombus(x, y, size, degrees, angle, color):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.color(color) #Цвет
+    turtle.right(angle)  # повернуть курсор
+    turtle.forward(size)  # задать размер стороны
+    turtle.right(180 - degrees)  # второй угол
+    turtle.forward(size)  # сторона
+    turtle.right(degrees)  # третий угол
+    turtle.forward(size)  # сторона
+    turtle.right(180 - degrees)  # четвертый угол
+    turtle.forward(size)  # последняя сторона
+    turtle.end_fill()
+    turtle.penup()
+    turtle.home()
+
+
+turtle.speed(10)
+
 #(Anya) rabbit
 
 #(Sasha) fish
 #trangle(20,60,'red',40,70,90,40)
 
 #(Liza) squirrel
-#rhombus(100,100,300,80,30,'green')
+def squirrel(x, y, scale):
+    rhombus(x, y, 80 * scale, 100, 0, 'green')
+    trangle(x, y, 'red', 30 * scale, 260, 60, 30 * scale)
+    square(x - 55 * scale, y - 80 * scale, 120 * scale, 'pink', 0)
+    trangle(x - 5 * scale, y - 90 * scale, 'blue', 35 * scale, 0, 65, 60 * scale)
+    square(x + 45 * scale, y - 100 * scale, 20 * scale, 'purple', 0)
+    trangle(x - 55 * scale, y, 'yellow', 120*scale, 90, 90, 100 * scale)
+    rhombus(x - 85 * scale, y - 200 * scale, 40 * scale, 60, 0, 'black')
+
+
+squirrel(10, 10, 2)
 
 #(Anya) human
 # square(0, 150, 150, 'blue', 30)
