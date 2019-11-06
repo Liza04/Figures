@@ -38,22 +38,22 @@ def trangle(x, y, colour, size, angle, degrees, size2):
 
 
  def rhombus(x, y, size, degrees, angle, color):
-    turtle.penup()
-    turtle.goto(x, y)
-    turtle.pendown()
-    turtle.begin_fill()
-    turtle.color(color) #Цвет
-    turtle.right(angle)  # повернуть курсор
-    turtle.forward(size)  # задать размер стороны
-    turtle.right(180 - degrees)  # второй угол
-    turtle.forward(size)  # сторона
-    turtle.right(degrees)  # третий угол
-    turtle.forward(size)  # сторона
-    turtle.right(180 - degrees)  # четвертый угол
-    turtle.forward(size)  # последняя сторона
-    turtle.end_fill()
-    turtle.penup()
-    turtle.home()
+  turtle.penup()
+  turtle.goto(x, y)
+  turtle.pendown()
+  turtle.begin_fill()
+  turtle.color(color) #Цвет
+  turtle.right(angle)  # повернуть курсор
+  turtle.forward(size)  # задать размер стороны
+  turtle.right(180 - degrees)  # второй угол
+  turtle.forward(size)  # сторона
+  turtle.right(degrees)  # третий угол
+  turtle.forward(size)  # сторона
+  turtle.right(180 - degrees)  # четвертый угол
+  turtle.forward(size)  # последняя сторона
+  turtle.end_fill()
+  turtle.penup()
+  turtle.home()
 
 
 turtle.speed(10)
@@ -94,5 +94,16 @@ square(0, 0, 2, 'blue', 30)
 #(Sasha) human2
 
 #(Liza) rocket
+def rocket(x, y, scale):
+    square(x, y, 100 * scale, 'light grey',0)
+    trangle(x + 100 * scale, y, 'slate blue', 100 * scale, 180, 120, 100 * scale)
+    square(x + 25 * scale, y - 100 * scale, 50 * scale, 'chocolate', 0)
+    rhombus(x + 25 * scale, y - 100 * scale, 50 * scale, 120, 90, 'royal blue')
+    rhombus(x + 75 * scale, y - 100 * scale, 50 * scale, 120, 30, 'light blue')
+    trangle(x + 35 * scale, y - 30 * scale, 'plum', 30 * scale, 0, 120, 30 * scale)
+
+
+rocket(10, 10, 2)
+
 
 turtle.exitonclick()
