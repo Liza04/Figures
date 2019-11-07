@@ -76,7 +76,17 @@ def rabbit(x, y, scale):
 
 rabbit(-150, 380, 1)
 
-# (Sasha) fish
+
+def fish(x,y,scale):
+  gohome()
+  trangle(x,y,'orange',80 * scale, 45, 90, 80 * scale)
+  trangle(x, y - 70 * scale, 'red', 100 * scale, 180, 90, 100 * scale)
+  trangle(x - 100 * scale, y + 30 * scale, 'green', 100 * scale, 270, 90, 100 * scale )
+  square(x, y - 70 * scale, 60 * scale, 'blue', 45)
+  rhombus(x - 80 * scale, y - 70 * scale, 50 * scale, 110, 40,'yellow')
+  rhombus(x - 80 * scale, y - 70 * scale,50 * scale,110,220,'orange')
+
+fish(0,80,0.7)
 
 
 def squirrel(x, y, scale):
@@ -114,7 +124,17 @@ def human(x, y, scale):
  human(-400, 400, 1.5)
 
 
-# (Sasha) human2
+def human2(x, y, scale):
+  gohome()
+  square(x, y, 100 * scale, 'orange', 225)
+  trangle(x, y, 'red', 160 * scale, 315, 90, 140 * scale)
+  trangle(x, y, 'green', 140 * scale, 190, 90, 160 * scale)
+  rhombus(x - 45 * scale,y - 170 * scale, 80 * scale, 120, 39,'blue')
+  rhombus(x - 140 * scale, y - 270 * scale, 40 * scale, 120, 180, 'black')
+  trangle(x + 20 * scale, y - 160 * scale, 'yellow', 60 * scale, 55, 90, 60 * scale)
+  rhombus(x + 20 * scale, y - 180 * scale, 40 * scale, 120, 0, 'black')
+    
+human2(-300,100,0.55)
 
 def rocket(x, y, scale):
     gohome()
