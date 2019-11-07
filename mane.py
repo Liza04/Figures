@@ -9,8 +9,8 @@ def gohome():
     turtle.home()
     turtle.pendown()
 
+
 def square(x, y, size, color, angle):
-    # TODO:(Anya)
     turtle.penup()
     turtle.goto(x, y)
     turtle.pendown()
@@ -28,7 +28,6 @@ def square(x, y, size, color, angle):
 
 
 def trangle(x, y, colour, size, angle, degrees, size2):
-    # TODO:(Sasha)
     turtle.penup()
     turtle.goto(x, y)
     turtle.pendown()
@@ -59,13 +58,11 @@ def rhombus(x, y, size, degrees, angle, color):
     turtle.forward(size)  # последняя сторона
     turtle.end_fill()
     turtle.penup()
-    # turtle.home()
 
 
 turtle.speed(10)
 
 
-# (Anya) rabbit
 def rabbit(x, y, scale):
     gohome()
     square(x, y, 50 * scale, 'orange', 0)
@@ -76,22 +73,32 @@ def rabbit(x, y, scale):
     trangle(x + 90 * scale, y - 200 * scale, 'yellow', 42 * scale, 45, 90, 42 * scale)
     trangle(x + 50 * scale, y - 130 * scale, 'green', 42 * scale, 135, 90, 42 * scale)
 
-# (Sasha) fish
-# trangle(20,60,'red',40,70,90,40)
 
-# (Liza) squirrel
+rabbit(-150, 380, 1)
+
+# (Sasha) fish
+
+
 def squirrel(x, y, scale):
     gohome()
     rhombus(x, y, 80 * scale, 100, 0, 'green')
+    gohome()
     trangle(x, y, 'red', 30 * scale, 260, 60, 30 * scale)
+    gohome()
     square(x - 55 * scale, y - 80 * scale, 120 * scale, 'pink', 0)
+    gohome()
     trangle(x - 5 * scale, y - 90 * scale, 'blue', 35 * scale, 0, 65, 60 * scale)
+    gohome()
     square(x + 45 * scale, y - 100 * scale, 20 * scale, 'purple', 0)
+    gohome()
     trangle(x - 55 * scale, y, 'yellow', 120 * scale, 90, 90, 100 * scale)
+    gohome()
     rhombus(x - 85 * scale, y - 200 * scale, 40 * scale, 60, 0, 'black')
 
 
-# (Anya) human
+squirrel(0, -100, 0.6)
+
+
 def human(x, y, scale):
     gohome()
     head = 42 * scale
@@ -104,23 +111,25 @@ def human(x, y, scale):
     trangle(x + 16 * scale, y - 95 * scale - head, 'black', 20 * scale, 90, 120, 20 * scale)
 
 
+ human(-400, 400, 1.5)
+
+
 # (Sasha) human2
 
-# (Liza) rocket
 def rocket(x, y, scale):
     gohome()
     square(x, y, 100 * scale, 'light grey', 0)
+    gohome()
     trangle(x + 100 * scale, y, 'slate blue', 100 * scale, 180, 120, 100 * scale)
+    gohome()
     square(x + 25 * scale, y - 100 * scale, 50 * scale, 'chocolate', 0)
+    gohome()
     rhombus(x + 25 * scale, y - 100 * scale, 50 * scale, 120, 90, 'royal blue')
+    gohome()
     rhombus(x + 75 * scale, y - 100 * scale, 50 * scale, 120, 30, 'light blue')
+    gohome()
     trangle(x + 35 * scale, y - 30 * scale, 'plum', 30 * scale, 0, 120, 30 * scale)
 
 
-human(-400, 400, 1.5)
-rabbit(-150, 380, 1)
-# squirrel(10, 10, 2)
-# rocket(10, 10, 2)
-
-square(0, 0, 2, 'blue', 30)
+rocket(-300, -150, 0.7)
 turtle.exitonclick()
