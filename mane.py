@@ -77,14 +77,12 @@ rabbit(-150, 380, 1)
 
 
 def fish(x,y,scale):
-  gohome()
-  trangle(x,y,'orange',80 * scale, 45, 90, 80 * scale)
-  trangle(x, y - 70 * scale, 'red', 100 * scale, 180, 90, 100 * scale)
-  trangle(x - 100 * scale, y + 30 * scale, 'green', 100 * scale, 270, 90, 100 * scale )
-  square(x, y - 70 * scale, 60 * scale, 'blue', 45)
-  rhombus(x - 80 * scale, y - 70 * scale, 50 * scale, 110, 40,'yellow')
-  rhombus(x - 80 * scale, y - 70 * scale,50 * scale,110,220,'orange')
-
+    trangle(x,y,'orange',80 * scale, 45, 90, 80 * scale)
+    trangle(x, y - 70 * scale, 'red', 100 * scale, 90, 90, 100 * scale)
+    trangle(x - 100 * scale, y + 30 * scale, 'green', 100 * scale, 0, 90, 100 * scale )
+    square(x, y - 70 * scale, 60 * scale, 'blue', 135)
+    rhombus(x - 85 * scale, y - 70 * scale, 50 * scale, 110, 90,'yellow')
+    rhombus(x - 85 * scale, y - 70 * scale,50 * scale,110,220,'orange')
 fish(0,80,0.7)
 
 
