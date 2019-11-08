@@ -4,12 +4,6 @@
 import turtle
 
 
-def gohome():
-    turtle.penup()
-    turtle.home()
-    turtle.pendown()
-
-
 def square(x, y, size, color, angle):
     turtle.penup()
     turtle.goto(x, y)
@@ -25,6 +19,8 @@ def square(x, y, size, color, angle):
     turtle.right(90)
     turtle.forward(size)
     turtle.end_fill()
+    turtle.penup()
+    turtle.home()
 
 
 def trangle(x, y, colour, size, angle, degrees, size2):
@@ -40,6 +36,8 @@ def trangle(x, y, colour, size, angle, degrees, size2):
     turtle.right(180 - degrees + angle)
     turtle.goto(x, y)
     turtle.end_fill()
+    turtle.penup()
+    turtle.home()
 
 
 def rhombus(x, y, size, degrees, angle, color):
@@ -58,6 +56,7 @@ def rhombus(x, y, size, degrees, angle, color):
     turtle.forward(size)  # последняя сторона
     turtle.end_fill()
     turtle.penup()
+    turtle.home()
 
 
 turtle.speed(10)
@@ -90,19 +89,12 @@ fish(0,80,0.7)
 
 
 def squirrel(x, y, scale):
-    gohome()
     rhombus(x, y, 80 * scale, 100, 0, 'green')
-    gohome()
     trangle(x, y, 'red', 30 * scale, 260, 60, 30 * scale)
-    gohome()
     square(x - 55 * scale, y - 80 * scale, 120 * scale, 'pink', 0)
-    gohome()
     trangle(x - 5 * scale, y - 90 * scale, 'blue', 35 * scale, 0, 65, 60 * scale)
-    gohome()
     square(x + 45 * scale, y - 100 * scale, 20 * scale, 'purple', 0)
-    gohome()
     trangle(x - 55 * scale, y, 'yellow', 120 * scale, 90, 90, 100 * scale)
-    gohome()
     rhombus(x - 85 * scale, y - 200 * scale, 40 * scale, 60, 0, 'black')
 
 
@@ -137,17 +129,11 @@ def human2(x, y, scale):
 human2(-300,100,0.55)
 
 def rocket(x, y, scale):
-    gohome()
     square(x, y, 100 * scale, 'light grey', 0)
-    gohome()
     trangle(x + 100 * scale, y, 'slate blue', 100 * scale, 180, 120, 100 * scale)
-    gohome()
     square(x + 25 * scale, y - 100 * scale, 50 * scale, 'chocolate', 0)
-    gohome()
     rhombus(x + 25 * scale, y - 100 * scale, 50 * scale, 120, 90, 'royal blue')
-    gohome()
     rhombus(x + 75 * scale, y - 100 * scale, 50 * scale, 120, 30, 'light blue')
-    gohome()
     trangle(x + 35 * scale, y - 30 * scale, 'plum', 30 * scale, 0, 120, 30 * scale)
 
 
