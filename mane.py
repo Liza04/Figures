@@ -117,15 +117,15 @@ def human(x, y, scale):
 
 
 def human2(x, y, scale):
-  gohome()
   square(x, y, 100 * scale, 'orange', 225)
-  trangle(x, y, 'red', 160 * scale, 315, 90, 140 * scale)
-  trangle(x, y, 'green', 140 * scale, 190, 90, 160 * scale)
-  rhombus(x - 45 * scale,y - 170 * scale, 80 * scale, 120, 39,'blue')
-  rhombus(x - 140 * scale, y - 270 * scale, 40 * scale, 120, 180, 'black')
-  trangle(x + 20 * scale, y - 160 * scale, 'yellow', 60 * scale, 55, 90, 60 * scale)
-  rhombus(x + 20 * scale, y - 180 * scale, 40 * scale, 120, 0, 'black')
-    
+  trangle(x, y, 'red', 160 * scale, 90, 90, 140 * scale)
+  trangle(x, y, 'green', 140 * scale, 40, 90, 160 * scale)
+  rhombus(x, y - 170 * scale, 80 * scale, 120, 90,'blue')
+  rhombus(x - 65 * scale, y - 290 * scale, 40 * scale, 120, 180, 'black')
+  trangle(x + 70 * scale, y - 140 * scale, 'yellow', 60 * scale, 85, 90, 60 * scale)
+  rhombus(x + 80 * scale, y - 200 * scale, 40 * scale, 120, 0, 'black')
+
+
 human2(-300,100,0.55)
 
 def rocket(x, y, scale):
