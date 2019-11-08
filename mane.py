@@ -110,11 +110,11 @@ squirrel(0, -100, 0.6)
 
 
 def human(x, y, scale):
-    gohome()
+    head = 42 * scale
     head = 42 * scale
     square(x + 50 * scale, y, 30 * scale, 'orange', 45)
-    trangle(x, y - head, 'green', 50 * scale, 45, 90, 50 * scale)
-    trangle(x + 100 * scale, y - head, 'yellow', 50 * scale, -45, -90, 50 * scale)
+    trangle(x, y - head, 'green', 50 * scale, 0, 90, 50 * scale)
+    trangle(x + 100 * scale, y - head, 'yellow', 50 * scale, 180, -90, 50 * scale)
     trangle(x + 50 * scale, y - 50 * scale - head, 'blue', 35 * scale, 135, -90, 35 * scale)
     trangle(x + 85 * scale, y - 85 * scale - head, 'black', 20 * scale, -45, 120, 20 * scale)
     rhombus(x + 50 * scale, y - 50 * scale - head, 30 * scale, 140, -28, 'red')
