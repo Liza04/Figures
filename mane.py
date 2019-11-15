@@ -82,6 +82,8 @@ def fish(x,y,scale):
     square(x, y - 70 * scale, 60 * scale, 'blue', 135)
     rhombus(x - 85 * scale, y - 70 * scale, 50 * scale, 110, 90,'yellow')
     rhombus(x - 85 * scale, y - 70 * scale,50 * scale,110,220,'orange')
+
+    
 fish(250, 350, 1)
 
 
